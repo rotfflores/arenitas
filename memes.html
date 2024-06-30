@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Las Arenitas - memes</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header>
+        <h1>Los mas buscados</h1>
+        <h2>¡Bienvenidos a la página de los mas buscados y teorias conspiranoicas!</h2>
+        <img class="logo" src="img/logo.jpg" alt="Logo de Las Arenitas">
+        <nav>
+            <ul class="ul-nav">
+                <li class="li-nav"><a href="index.html">Inicio</a></li>
+                <li class="li-nav"><a href="memes.html">Galeria</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="galeria-de-memes">
+            <h2>Galeria</h2>
+            <div class="galery">
+                <div class="meme">
+                    <img class="img-meme" src="img/meme-1.jpg" alt="Meme 1">
+                </div>
+                <div class="meme">
+                    <img class="img-meme" src="img/meme2.jpg" alt="Meme 2">
+                </div>
+                <div class="meme">
+                    <img class="img-meme" src="img/meme3.jpg" alt="Meme 3">
+                </div>
+                <div class="meme">
+                    <img class="img-meme" src="img/meme4.jpg" alt="Meme 4">
+                </div>
+                <div class="meme">
+                    <img class="img-meme" src="img/meme5.jpg" alt="Meme 5">
+                </div>
+                <div class="meme">
+                    <img class="img-meme" src="img/meme6.jpg" alt="Meme 6">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var images = document.getElementsByClassName("img-meme");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+
+        for (var i = 0; i < images.length; i++) {
+            images[i].onclick = function(){
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() { 
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>
