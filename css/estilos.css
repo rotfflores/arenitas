@@ -95,6 +95,15 @@ section {
     border-radius: 10px;
 }
 
+.video {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: auto;
+    gap: 10px;    
+}
+
 /* Añadir esto a tu archivo css/estilos.css */
 .modal {
     display: none; 
@@ -166,5 +175,11 @@ section {
 
     .img-meme {
         width: 100%;
+    }
+
+    .video {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
     }
 }
