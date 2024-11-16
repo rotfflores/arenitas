@@ -16,6 +16,11 @@ header {
     text-align: center;
 }
 
+.logo {
+    width: 300px;
+    padding: 20px;
+}
+
 header h1 {
     font-size: 2em;
 }
